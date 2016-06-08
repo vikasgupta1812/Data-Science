@@ -149,8 +149,6 @@ dim(affyMisSmall)
 ## [1] 10 22
 ```
 
-
-
 ```r
 dbDisconnect(hg19)
 ```
