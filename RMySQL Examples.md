@@ -59,9 +59,6 @@ dbListFields(hg19, "affyU133Plus2")
 ## [21] "qStarts"     "tStarts"
 ```
 
-
-
-
 ```r
 dbGetQuery(hg19, "select count(*) from affyU133Plus2")
 ```
