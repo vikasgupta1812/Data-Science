@@ -38,8 +38,6 @@ length(allTables)
 ```
 
 
-
-
 ```r
 allTables[1:5]
 ```
@@ -48,15 +46,6 @@ allTables[1:5]
 ## [1] "HInv"         "HInvGeneMrna" "acembly"      "acemblyClass"
 ## [5] "acemblyPep"
 ```
-
-
-
-
-
-
-
-
-
 
 ```r
 dbListFields(hg19, "affyU133Plus2")
