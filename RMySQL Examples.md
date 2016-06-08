@@ -1,29 +1,15 @@
 RMySQL
-========================================================
-
-
+====
 
 ```r
 library(RMySQL)
 ```
-
-```
-## Loading required package: DBI
-```
-
-
 
 ```r
 ucscDb <- dbConnect(MySQL(), user = "genome", host = "genome-mysql.cse.ucsc.edu")
 result <- dbGetQuery(ucscDb, "show databases;")
 dbDisconnect(ucscDb)
 ```
-
-```
-## [1] TRUE
-```
-
-
 
 ```r
 result
@@ -35,191 +21,11 @@ result
 ## 2              ailMel1
 ## 3              allMis1
 ## 4              anoCar1
-## 5              anoCar2
-## 6              anoGam1
-## 7              apiMel1
-## 8              apiMel2
-## 9              aplCal1
-## 10             balAcu1
-## 11             bosTau2
-## 12             bosTau3
-## 13             bosTau4
-## 14             bosTau5
-## 15             bosTau6
-## 16             bosTau7
-## 17           bosTauMd3
-## 18             braFlo1
-## 19             caeJap1
-## 20              caePb1
-## 21              caePb2
-## 22             caeRem2
-## 23             caeRem3
-## 24             calJac1
-## 25             calJac3
-## 26             canFam1
-## 27             canFam2
-## 28             canFam3
-## 29             cavPor3
-## 30                 cb1
-## 31                 cb3
-## 32                ce10
-## 33                 ce2
-## 34                 ce4
-## 35                 ce6
-## 36             cerSim1
-## 37             choHof1
-## 38             chrPic1
-## 39                 ci1
-## 40                 ci2
-## 41             danRer1
-## 42             danRer2
-## 43             danRer3
-## 44             danRer4
-## 45             danRer5
-## 46             danRer6
-## 47             danRer7
-## 48             dasNov3
-## 49             dipOrd1
-## 50                 dm1
-## 51                 dm2
-## 52                 dm3
-## 53                 dp2
-## 54                 dp3
-## 55             droAna1
-## 56             droAna2
-## 57             droEre1
-## 58             droGri1
-## 59             droMoj1
-## 60             droMoj2
-## 61             droPer1
-## 62             droSec1
-## 63             droSim1
-## 64             droVir1
-## 65             droVir2
-## 66             droYak1
-## 67             droYak2
-## 68             echTel1
-## 69             echTel2
-## 70             equCab1
-## 71             equCab2
-## 72             eriEur1
-## 73             felCat3
-## 74             felCat4
-## 75             felCat5
-## 76                 fr1
-## 77                 fr2
-## 78                 fr3
-## 79             gadMor1
-## 80             galGal2
-## 81             galGal3
-## 82             galGal4
-## 83             gasAcu1
-## 84             geoFor1
-## 85                  go
-## 86            go080130
-## 87            go140213
-## 88             gorGor3
-## 89             hetGla1
-## 90             hetGla2
-## 91                hg16
-## 92                hg17
-## 93                hg18
-## 94                hg19
-## 95         hg19Patch10
-## 96          hg19Patch2
-## 97          hg19Patch5
-## 98          hg19Patch9
-## 99                hg38
-## 100            hgFixed
-## 101             hgTemp
-## 102          hgcentral
-## 103            latCha1
-## 104            loxAfr3
-## 105            macEug1
-## 106            macEug2
-## 107            melGal1
-## 108            melUnd1
-## 109            micMur1
-## 110               mm10
-## 111         mm10Patch1
-## 112                mm5
-## 113                mm6
-## 114                mm7
-## 115                mm8
-## 116                mm9
-## 117            monDom1
-## 118            monDom4
-## 119            monDom5
-## 120            musFur1
-## 121            myoLuc2
-## 122            nomLeu1
-## 123            nomLeu2
-## 124            nomLeu3
-## 125            ochPri2
-## 126            oreNil1
-## 127            oreNil2
-## 128            ornAna1
-## 129            oryCun2
-## 130            oryLat2
-## 131            otoGar3
-## 132            oviAri1
-## 133            oviAri3
-## 134            panTro1
-## 135            panTro2
-## 136            panTro3
-## 137            panTro4
-## 138            papAnu2
-## 139            papHam1
-## 140 performance_schema
-## 141            petMar1
-## 142            petMar2
-## 143            ponAbe2
-## 144            priPac1
-## 145            proCap1
-## 146     proteins120806
-## 147     proteins121210
-## 148     proteins140122
-## 149           proteome
-## 150            pteVam1
-## 151            rheMac1
-## 152            rheMac2
-## 153            rheMac3
-## 154                rn3
-## 155                rn4
-## 156                rn5
-## 157            sacCer1
-## 158            sacCer2
-## 159            sacCer3
-## 160            saiBol1
-## 161            sarHar1
-## 162            sorAra1
-## 163           sp120323
-## 164           sp121210
-## 165           sp140122
-## 166            speTri2
-## 167            strPur1
-## 168            strPur2
-## 169            susScr2
-## 170            susScr3
-## 171            taeGut1
-## 172            tarSyr1
-## 173               test
-## 174            tetNig1
-## 175            tetNig2
-## 176            triMan1
-## 177            tupBel1
-## 178            turTru2
-## 179            uniProt
-## 180            vicPac1
-## 181            vicPac2
-## 182           visiGene
+...
 ## 183            xenTro1
 ## 184            xenTro2
 ## 185            xenTro3
 ```
-
-
-
 
 ```r
 hg19 <- dbConnect(MySQL(), user = "genome", db = "hg19", host = "genome-mysql.cse.ucsc.edu")
@@ -380,5 +186,3 @@ dbDisconnect(hg19)
 ```
 ## [1] TRUE
 ```
-
-
