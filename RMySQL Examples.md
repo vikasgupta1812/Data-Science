@@ -69,8 +69,6 @@ dbGetQuery(hg19, "select count(*) from affyU133Plus2")
 ```
 
 
-
-
 ```r
 affyData <- dbReadTable(hg19, "affyU133Plus2")
 head(affyData)
@@ -122,9 +120,6 @@ head(affyData)
 ```
 
 
-
-
-
 ```r
 query <- dbSendQuery(hg19, "select * from affyU133Plus2 where misMatches between 1 and 3")
 affyMis <- fetch(query)
@@ -136,11 +131,6 @@ quantile(affyMis$misMatches)
 ##    1    1    2    2    3
 ```
 
-
-
-
-
-
 ```r
 affyMisSmall <- fetch(query, n = 10)
 dbClearResult(query)
@@ -149,10 +139,6 @@ dbClearResult(query)
 ```
 ## [1] TRUE
 ```
-
-
-
-
 
 
 ```r
